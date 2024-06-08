@@ -1,0 +1,7 @@
+<Programa> ::= “Program” “id” “;” <Cuerpo> “end” “.”
+<Cuerpo> ::= Cuerpo Sent; 
+<Sent> ::= <Asignaciones> | <Condicionales>
+<Asignaciones> ::= "id" "opasign" EA 
+<Condicionales> ::= "If" <Cond> "Then" <Cuerpo> "end" | "If" <Cond> "Then" <Cuerpo> "Else" <Cuerpo> "end"
+<EA> ::= "const" | "id" | <EA> + <EA> | <EA> - <EA> | <EA> * <EA> | <EA> / <EA> | (<EA>)
+<Cond> <EA> "OpRel" <EA>

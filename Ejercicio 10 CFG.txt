@@ -1,0 +1,13 @@
+<Programa> ::= "Program" "Id" ";" <EAsignacion> <Cuerpo> "End" "."
+
+<EAsignacion> ::= "Var"<Var>";" | Epsilon
+<Var> ::= "Id" "OpAsign" <Tipo> <Var> | "End"
+<Tipo> ::= "Integer" | "Char" | "String" | "Boolean"
+
+<Cuerpo> ::= <Cuerpo> <Sent> ";" | epsilon
+<Sent> ::= <Ciclo> | <Condicional> | <Asignacion>
+<Ciclo> "While" <Cond> "Do" <Cuerpo> "end"
+<Condicional> ::= "If" <Cond> "Then" <Cuerpo> "end" | "If" <Cond> "Then" <Cuerpo> "Else" <Cuerpo> "end"
+<Asignacion> ::= "id" "opasign" <EA>
+<Cond> <EA> "OpRel" <EA>
+<EA> ::= "const" | "id" | <EA> + <EA> | <EA> - <EA> | <EA> * <EA> | <EA> / <EA> | (<EA>)

@@ -1,0 +1,27 @@
+15) Construya la TAS para cada una de las siguientes gramáticas:
+
+1) 
+V = { A, B, C, D, E }
+T = { a, b, c, &, $, #, @ }
+P = { A → AB | CA | &A | D
+B → $A | #A | E
+C → A@ | e
+D → Da | Db | a | D | E
+E → cEc | CE
+}
+S = A
+
+
+A → CA | &A | D
+C → A@ | e
+D → Da | Db | a
+
+
+P= {A -> TA | T | D
+    T ->  C | &
+    C -> A@ | e
+    D -> DZ
+    Z -> a  | b}
+
+                      
+

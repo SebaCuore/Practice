@@ -1,0 +1,15 @@
+a) Elimine símbolos inútiles
+b) Construya una gramática equivalente en CNF
+c) Construya una gramática equivalente en GNF
+d) Construya el PDA equivalente
+
+1)a) 
+C → C + C | C; E | C ^ C | E
+E → a | b | C
+
+b)
+C → C + C | C; E | C ^ C | E
+E → a | b | C
+
+C -> CA | CB | CD
+A -> 

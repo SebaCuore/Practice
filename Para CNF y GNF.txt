@@ -1,0 +1,12 @@
+Para CNF y GNF
+1- Simbolos inútiles
+2- e- producciones
+3- Producciones unitarias
+
+Luego --> para CNF:  2var o 1terminal
+      --> Para GNF: 1 terminal seguido de (vacio) o mas variables, eliminar RI y eliminar e-producciones
+
+Nota:
+ -No conviene hacer GNF desde CNF
+
+ - No conviene sacar RI para CNF

@@ -1,0 +1,10 @@
+<Programa> ::= "Program" "Id" ";" <Cuerpo> "End" "."
+<Cuerpo> ::= "Type"<Type>; "Const"<Const>; "Var"<Var>;
+<Type> ::=  "Id" "OpAsign" <Clase> "of" <Tipo>; <Type> | "End"
+<Const> ::= "Id" "OpAsign" <EA>; <Const> | "End"
+<Var> ::= "Id" "OpAsign" <Tipo> <Var> | "End"
+<Clase> ::= <Record> | <Array>
+<Record> ::= "Id" "OpAsign" <Tipo> <Record>
+<Array> ::= "id" "OpAsign" "[" "Const" ".." "Const" "]" "Of" <Tipo> | "id" "OpAsign" "[" "Const" ".." "Var" "]" "Of" <Tipo>
+<Tipo> ::= "Integer" | "Char" | "String" | "Boolean"
+<EA> ::= "const" | "id" | <EA> + <EA> | <EA> - <EA> | <EA> * <EA> | <EA> / <EA> | (<EA>)  

@@ -1,0 +1,13 @@
+c) ¿Qué lenguaje genera esta gramática? 
+S → SaS | T 
+T → bT | b | S 
+S=> SaS=> TaS 0=> bTaS => baS => baT => babT => babS => babSaS
+
+babababababababab
+
+L={((b^j)(a^i))^n (b^k) / (i,j,k >= 1) y (n>=1)}
+
+
+d) Defina una CFG equivalente no ambigua 
+S → SaS | T
+T→ baT | bT  | b

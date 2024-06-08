@@ -1,0 +1,42 @@
+14. Elimine ambigüedad, recursividad por izquierda y factorice las gramáticas del punto anterior.
+Construya la TAS correspondiente a cada una.
+1) C → C + C | C; E | C ^ C | E
+   E → a | b | C
+
+   C -> C + E | C; E | C ^ E | E
+   E -> a | b 
+
+   
+   
+   2) S → Sa | abB | ab
+      B → eBf | dBg | ef | dg
+
+              
+
+
+
+
+
+   3) S → AB | AS 
+      A → A* | A+| # 
+      B →  e | B | aBc | bBdc
+
+
+    3)  S → AB | SBC | ABD | AS 
+        A → A* | A+ | SD | # 
+        G → GaS | Gsd | bDa
+        C → aF | Cb 
+        D → Da | aDbY | SCD 
+        B → ε | B | aBc | bBdc 
+
+Eliminamos símbolos inútiles
+        S → AB | AS 
+        A → A* | A+ | # 
+        B → ε | aBc | bBdc 
+
+        ELIMINAR RECURSIVIDAD POR IZQ Y FACTORIZAR
+        S--> AZ
+        Z--> B | S
+        A--> #X
+        X--> *X | +X | epsilon
+        B--> eps| aBc | bBdc
